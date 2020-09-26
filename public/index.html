@@ -26,8 +26,12 @@
             nombre: 'Xnor'
         });
 
-        socket.on('mensaje', function(payload) {
+        socket.on('emitir-mensaje', function(payload) {
             console.log('Escuchando:', payload);
+        });
+        socket.on('active-mensaje', function(bands) {
+            console.clear();
+            console.table(bands);
         });
     </script>
 </body>
